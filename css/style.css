@@ -1,0 +1,151 @@
+body {
+    background-color: #101114;
+    /*color: white;*/
+}
+
+.row {
+    margin-top: 75px;
+}
+
+/*боковое меню*/
+.menu {
+    width: 320px;
+    height: 380px;
+}
+
+/*изменение заливки для первых трех пунктов меню*/
+.nav-account, .nav-pay, .nav-history {
+    background-color: #1f2229;
+}
+
+/*изменение заливки для последних двух пунктов меню*/
+.nav-settings, .nav-exit {
+    background-color: #191c24;
+}
+
+/*верхняя линия для "Выйти"*/
+.nav-exit {
+    border-top: 1px solid #20232b;
+}
+
+/*внешний стиль для меню*/
+.nav-tabs > li {
+    height: 75px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.nav-tabs li a {
+    padding: 25px 26px;
+}
+
+.nav-a-last {
+    color: #808592;
+}
+
+
+/*общее поле для заполнения банковской карты*/
+.credit-card {
+    font-size: 16px;
+    color: #a7b2c1;
+    width: 637px;
+    height: 570px;
+    background-color: #f7f8f8;
+    padding: 45px 0 0 30px;
+}
+
+h3{
+    color: black;
+    margin: 30px 0 20px 0;
+}
+
+.credit-card label {
+    font-weight: normal;
+}
+
+/*прямой угол input и его высота*/
+.form-control {
+    border-radius: 0;
+    height: 44px;
+}
+
+/*внешняя и обратная сторона карты*/
+.card-face, .card-reverse {
+    width: 350px;
+    height: 236px;
+    border: 2px solid #e4e9ee;
+    border-radius: 12px;
+    padding: 20px 10px;
+}
+
+/*внешняя сторона*/
+.card-face {
+    position: relative;
+    z-index: 1;
+    background: inherit;
+}
+
+/*форма для номера карты*/
+.card-number {
+    width: 66px;
+    display: inline;
+    margin: -3px 0 3px 2px;
+}
+
+/*форма срока действия карты*/
+
+.form-group {
+    margin: 9px 0 12px 0;
+}
+
+.card-date-month {
+    width: 70px;
+    height: 42px;
+    margin-right: 7px;
+    color: black;
+}
+
+.card-date-year {
+    width: 84px;
+    height: 42px;
+    color: black;
+}
+
+/*форма держателя карты*/
+.card-holder{
+    height: 39px;
+}
+
+
+/*обратная сторона*/
+.card-reverse {
+    position: absolute;
+    top: 230px;
+    left: 245px;
+}
+
+.card-reverse-line {
+    height: 42px;
+    background-color: #e4e9ee;
+    margin: 3px -10px 15px 0;
+}
+
+.card-cvv {
+    width: 137px;
+    float: right;
+}
+
+.card-cvv-title {
+    float: right;
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+/*кнопка*/
+.btn {
+    border-radius: 50px;
+    padding: 9px 32px;
+    font-weight: bold;
+    margin: 40px 0 0 15px;
+}
