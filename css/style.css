@@ -154,6 +154,7 @@ h3 {
 
 
 /*границы форм при заполнении...*/
+
 /*...неправильное*/
 .error {
     -webkit-box-shadow: 0 1px 6px 0 #962626;
@@ -162,14 +163,13 @@ h3 {
 }
 
 /*...правильное*/
-
 .valid {
     -webkit-box-shadow: 0 1px 6px 0 #136D00;
     box-shadow: 0 1px 6px 0 #136D00;
     border-color: #49BF30;
 }
 
-/*скрываю сообщения о некорректности*/
-#-error {
+/*скрываю вшитые сообщения о некорректности*/
+label.error {
     display: none !important;
 }

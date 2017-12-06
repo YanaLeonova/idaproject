@@ -25,7 +25,7 @@
 
 <body>
 <div class="container">
-    <div class="row center-block">
+    <div class="row">
         <nav class="col-md-offset-1 col-md-5 menu">
             <ul class="nav nav-tabs nav-stacked">
                 <li class="nav-account"><a href="#">Личный кабинет</a></li>
@@ -44,13 +44,13 @@
             <form id="credit-card">
                 <div class="card-face">
                     <label>Номер карты</label><br>
-                    <input class="form-control card-number cardNumber1" type="text" form="credit-card"
+                    <input class="form-control card-number" name="cardNumber1" type="text" form="credit-card"
                            maxlength="4">
-                    <input class="form-control card-number cardNumber2" type="text" form="credit-card"
+                    <input class="form-control card-number" name="cardNumber2" type="text" form="credit-card"
                            maxlength="4">
-                    <input class="form-control card-number cardNumber3" type="text" form="credit-card"
+                    <input class="form-control card-number" name="cardNumber3" type="text" form="credit-card"
                            maxlength="4">
-                    <input class="form-control card-number cardNumber4" type="text" form="credit-card"
+                    <input class="form-control card-number" name="cardNumber4" type="text" form="credit-card"
                            maxlength="4">
                     <div class="form-group">
                         <label>Срок действия</label><br>
@@ -77,14 +77,14 @@
                             <option value="22">2022</option>
                         </select>
                     </div>
-                    <input class="form-control card-holder cardHolder" type="text" form="credit-card"
+                    <input class="form-control card-holder" name="cardHolder" type="text" form="credit-card"
                            placeholder="Держатель карты">
                 </div>
 
                 <div class="card-reverse">
                     <div class="card-reverse-line"></div>
                     <label class="card-cvv-title">Код CVV2 / CVC2</label><br>
-                    <input class="form-control card-cvv cardCvv" type="text" form="credit-card" maxlength="3">
+                    <input class="form-control card-cvv" name="cardCvv" type="text" form="credit-card" maxlength="3">
                 </div>
 
 
