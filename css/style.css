@@ -82,8 +82,8 @@ h3 {
 /*внешняя сторона*/
 .card-face {
     position: relative;
-    z-index: 1;
-    background: inherit;
+    z-index: 10;
+    background-color: #f7f8f8;
 }
 
 /*форма для номера карты*/
@@ -119,9 +119,10 @@ h3 {
 
 /*обратная сторона*/
 .card-reverse {
-    position: absolute;
-    top: 230px;
-    left: 245px;
+    position: relative;
+    top: -215px;
+    left: 215px;
+    z-index: 1;
 }
 
 .card-reverse-line {
@@ -144,26 +145,31 @@ h3 {
 
 /*кнопка*/
 .btn {
+    position: relative;
     border-radius: 50px;
     padding: 9px 32px;
     font-weight: bold;
-    margin: 40px 0 0 15px;
+    margin: -374px 0 0 15px;
 }
 
 
 /*границы форм при заполнении...*/
 /*...неправильное*/
-input:focus:required:invalid,
-textarea:focus:required:invalid {
+.error {
     -webkit-box-shadow: 0 1px 6px 0 #962626;
     box-shadow: 0 1px 6px 0 #962626;
     border-color: #C80101;
 }
 
 /*...правильное*/
-input:required:valid,
-textarea:required:valid {
+
+.valid {
     -webkit-box-shadow: 0 1px 6px 0 #136D00;
     box-shadow: 0 1px 6px 0 #136D00;
     border-color: #49BF30;
+}
+
+/*скрываю сообщения о некорректности*/
+#-error {
+    display: none !important;
 }

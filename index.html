@@ -13,6 +13,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.js"></script>
     <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/jquery.validate.js"></script>
     <script src="js/js.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,60 +41,55 @@
             <p>Номер счета:</p>
             <p>Сумма платежа:</p>
             <h3>Данные банковской карты</h3>
-            <div class="card-face">
-                <form id="credit-card">
+            <form id="credit-card">
+                <div class="card-face">
                     <label>Номер карты</label><br>
-                    <input class="form-control card-number" type="text" form="credit-card" required="required"
-                           maxlength="4" pattern="[0-9]{4}">
-                    <input class="form-control card-number" type="text" form="credit-card" required="required"
-                           maxlength="4" pattern="[0-9]{4}">
-                    <input class="form-control card-number" type="text" form="credit-card" required="required"
-                           maxlength="4" pattern="[0-9]{4}">
-                    <input class="form-control card-number" type="text" form="credit-card" required="required"
-                           maxlength="4" pattern="[0-9]{4}">
-                </form>
-                <div class="form-group">
-                    <label>Срок действия</label><br>
-                    <select class="card-date-month" form="credit-card" name="month">
-                        <option value="01">01</option>
-                        <option value="02">02</option>
-                        <option value="03">03</option>
-                        <option value="04">04</option>
-                        <option value="05">05</option>
-                        <option value="06">06</option>
-                        <option value="07">07</option>
-                        <option value="08">08</option>
-                        <option value="09">09</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                    </select>
-                    <select class="card-date-year" form="credit-card" name="year">
-                        <option value="17">2017</option>
-                        <option value="18">2018</option>
-                        <option value="19">2019</option>
-                        <option value="20">2020</option>
-                        <option value="21">2021</option>
-                        <option value="22">2022</option>
-                    </select>
-                </div>
-                <div>
-                    <input class="form-control card-holder" type="text" form="credit-card" placeholder="Держатель карты"
-                           required="required" pattern="^[a-zA-Z\s]{4,}">
+                    <input class="form-control card-number cardNumber1" type="text" form="credit-card"
+                           maxlength="4">
+                    <input class="form-control card-number cardNumber2" type="text" form="credit-card"
+                           maxlength="4">
+                    <input class="form-control card-number cardNumber3" type="text" form="credit-card"
+                           maxlength="4">
+                    <input class="form-control card-number cardNumber4" type="text" form="credit-card"
+                           maxlength="4">
+                    <div class="form-group">
+                        <label>Срок действия</label><br>
+                        <select class="card-date-month" form="credit-card" name="month">
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <select class="card-date-year" form="credit-card" name="year">
+                            <option value="17">2017</option>
+                            <option value="18">2018</option>
+                            <option value="19">2019</option>
+                            <option value="20">2020</option>
+                            <option value="21">2021</option>
+                            <option value="22">2022</option>
+                        </select>
+                    </div>
+                    <input class="form-control card-holder cardHolder" type="text" form="credit-card"
+                           placeholder="Держатель карты">
                 </div>
 
-            </div>
-
-            <div class="card-reverse">
-                <div class="card-reverse-line"></div>
-                <label class="card-cvv-title">Код CVV2 / CVC2</label><br>
-                <input class="form-control card-cvv" type="text" form="credit-card" required="required" maxlength="3"
-                       pattern="[0-9]{3}">
-            </div>
+                <div class="card-reverse">
+                    <div class="card-reverse-line"></div>
+                    <label class="card-cvv-title">Код CVV2 / CVC2</label><br>
+                    <input class="form-control card-cvv cardCvv" type="text" form="credit-card" maxlength="3">
+                </div>
 
 
-            <button type="submit" form="credit-card" class="btn btn-primary">Оплатить</button>
-
+                <button type="submit" form="credit-card" class="btn btn-primary">Оплатить</button>
+            </form>
 
         </section>
     </div>
