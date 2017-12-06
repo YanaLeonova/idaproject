@@ -1,4 +1,5 @@
 body {
+    font-family: "Arial", sans-serif;
     background-color: #101114;
     /*color: white;*/
 }
@@ -44,7 +45,6 @@ body {
     color: #808592;
 }
 
-
 /*общее поле для заполнения банковской карты*/
 .credit-card {
     font-size: 16px;
@@ -55,7 +55,7 @@ body {
     padding: 45px 0 0 30px;
 }
 
-h3{
+h3 {
     color: black;
     margin: 30px 0 20px 0;
 }
@@ -113,10 +113,9 @@ h3{
 }
 
 /*форма держателя карты*/
-.card-holder{
+.card-holder {
     height: 39px;
 }
-
 
 /*обратная сторона*/
 .card-reverse {
@@ -140,6 +139,7 @@ h3{
     float: right;
     margin-bottom: 0;
     font-weight: normal;
+    padding-right: 8px;
 }
 
 /*кнопка*/
@@ -148,4 +148,22 @@ h3{
     padding: 9px 32px;
     font-weight: bold;
     margin: 40px 0 0 15px;
+}
+
+
+/*границы форм при заполнении...*/
+/*...неправильное*/
+input:focus:required:invalid,
+textarea:focus:required:invalid {
+    -webkit-box-shadow: 0 1px 6px 0 #962626;
+    box-shadow: 0 1px 6px 0 #962626;
+    border-color: #C80101;
+}
+
+/*...правильное*/
+input:required:valid,
+textarea:required:valid {
+    -webkit-box-shadow: 0 1px 6px 0 #136D00;
+    box-shadow: 0 1px 6px 0 #136D00;
+    border-color: #49BF30;
 }
