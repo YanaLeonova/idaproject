@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    //создаю правило для ввода имени владельца карты только латинскими буквами
+//создаю правило для ввода имени владельца карты только латинскими буквами
     $.validator.addMethod("lettersonly", function (value, element) {
         return this.optional(element) || /[a-z]+/i.test(value);
     });
@@ -42,4 +42,5 @@ $(document).ready(function () {
             }
         }
     });
-});
+})
+;

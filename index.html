@@ -25,7 +25,10 @@
 
 <body>
 <div class="container">
-    <div class="row">
+    <foo class="row">
+
+        <!--боковое меню-->
+
         <nav class="col-md-offset-1 col-md-5 menu">
             <ul class="nav nav-tabs nav-stacked">
                 <li class="nav-account"><a href="#">Личный кабинет</a></li>
@@ -35,14 +38,26 @@
                 <li class="nav-exit"><a class="nav-a-last" href="#">Выйти</a></li>
             </ul>
         </nav>
+
+        <!--блок для банковской карты-->
+
         <section class="col-md-6 credit-card">
 
+            <!--информация по оплате-->
+
             <p>Информация по оплате:</p>
-            <p>Номер счета:</p>
-            <p>Сумма платежа:</p>
+            <p class="payment-number">Номер счета:</p> <span>87123658716587</span><br>
+            <p class="payment-sum">Сумма платежа:</p> <span>100 руб.</span>
             <h3>Данные банковской карты</h3>
+
+            <!--форма для ввода данных-->
+
             <form id="credit-card">
+
+                <!--лицевая часть карты-->
                 <div class="card-face">
+
+                    <!--номер карты-->
                     <label>Номер карты</label><br>
                     <input class="form-control card-number" name="cardNumber1" type="text" form="credit-card"
                            maxlength="4">
@@ -52,6 +67,8 @@
                            maxlength="4">
                     <input class="form-control card-number" name="cardNumber4" type="text" form="credit-card"
                            maxlength="4">
+
+                    <!--срок действия карты-->
                     <div class="form-group">
                         <label>Срок действия</label><br>
                         <select class="card-date-month" form="credit-card" name="month">
@@ -77,20 +94,36 @@
                             <option value="22">2022</option>
                         </select>
                     </div>
+
+                    <!--владелец карты-->
                     <input class="form-control card-holder" name="cardHolder" type="text" form="credit-card"
                            placeholder="Держатель карты">
                 </div>
 
+                <!--обратная сторона карты-->
                 <div class="card-reverse">
+
+                    <!--темная линия на обратной стороне-->
                     <div class="card-reverse-line"></div>
+
+                    <!--код CVV-->
                     <label class="card-cvv-title">Код CVV2 / CVC2</label><br>
                     <input class="form-control card-cvv" name="cardCvv" type="text" form="credit-card" maxlength="3">
                 </div>
 
-
+                <!--кнопка отправки-->
                 <button type="submit" form="credit-card" class="btn btn-primary">Оплатить</button>
             </form>
 
+
+            <!--подвал с текстом-->
+
+            <footer>
+                <p class="text-footer">Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.</p>
+                <p class="text-footer">Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.</p>
+                <p class="text-footer">Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.</p>
+                <p class="text-footer">Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.</p>
+            </footer>
         </section>
     </div>
 </div>
