@@ -3,14 +3,36 @@ body {
     background-color: #101114;
 }
 
-.row {
-    margin-top: 75px;
+.main {
+    display: inline-flex;
 }
 
-/*боковое меню*/
+/*пустой row для отступа*/
+.empty {
+    height: 50px;
+    width: 100%;
+}
+
+/***********************************************************боковое меню*/
 .menu {
-    width: 320px;
+    max-width: 320px;
+    min-width: 153px;
     height: 380px;
+    margin-left: 86px;
+}
+
+/*удаление margin у блока menu через media*/
+@media (max-width: 1199px) {
+    .menu {
+        margin-left: 0;
+    }
+}
+
+/*лепим боковое меню к левой стороне при уменьшении экрана*/
+@media (max-width: 992px) {
+    .container {
+        margin-left: 0
+    }
 }
 
 /*изменение заливки для первых трех пунктов меню*/
@@ -29,8 +51,8 @@ body {
 }
 
 /*внешний стиль для меню*/
+
 .nav-tabs > li {
-    height: 75px;
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 0.5px;
@@ -44,16 +66,22 @@ body {
     color: #808592;
 }
 
-/*общий стиль поля для заполнения банковской карты*/
+/**************************************конец бокового меню*/
+
+/****************************************************поле для заполнения банковской карты*/
+
+/*общий стиль*/
 .credit-card {
+    width: 55%;
+    min-width: 637px;
+    height: 822px;
     font-size: 16px;
     color: #a7b2c1;
-    width: 637px;
-    height: 822px;
     background-color: #f7f8f8;
     padding: 45px 0 0 30px;
 }
 
+/********************************шапка*/
 h3 {
     color: black;
     margin: 17px 0 20px 0;
@@ -80,13 +108,15 @@ h3 {
     padding-right: 34px;
 }
 
+/************************конец шапки*/
+
 /*прямой угол поля input и его высота*/
 .form-control {
     border-radius: 0;
     height: 44px;
 }
 
-/*внешняя и обратная сторона карты, общий стиль*/
+/***************************************внешняя и обратная сторона карты*/
 
 #credit-card {
     width: inherit;
@@ -101,7 +131,7 @@ h3 {
     padding: 20px 10px;
 }
 
-/*внешняя сторона*/
+/*******************************************лицевая сторона*/
 .card-face {
     position: relative;
     z-index: 10;
@@ -143,7 +173,9 @@ h3 {
     height: 39px;
 }
 
-/*обратная сторона*/
+/*************************конец лицевой стороны*/
+
+/*************************************************обратная сторона*/
 .card-reverse {
     position: relative;
     top: -215px;
@@ -162,7 +194,6 @@ h3 {
 .card-cvv {
     width: 137px;
     float: right;
-
     background-image: url("../img/info.png") !important;
     background-repeat: no-repeat;
     background-position: 100px; /*Позиционируем*/
@@ -176,7 +207,9 @@ h3 {
     padding-right: 8px;
 }
 
-/*кнопка*/
+/*************************конец обратной стороны*/
+
+/*************************************************кнопка*/
 .btn {
     position: relative;
     border-radius: 50px;
@@ -185,7 +218,7 @@ h3 {
     margin: -374px 0 0 15px;
 }
 
-/*подвал*/
+/*************************************************подвал*/
 footer {
     background-color: #373c43 !important;
     margin-left: -30px;
@@ -198,7 +231,7 @@ footer {
     padding: 10px 30px 0 30px;
 }
 
-footer :first-child{
+footer :first-child {
     padding: 39px 30px 0 30px;
 }
 
@@ -206,9 +239,11 @@ footer :last-child {
     padding-bottom: 20px;
 }
 
+/*************************конец подвала*/
 
-/*ОСТАЛЬНОЕ*/
-/*границы форм при заполнении...*/
+/*************************ОСТАЛЬНОЕ*************************/
+
+/*************************границы форм при заполнении...*/
 
 /*...неправильное*/
 .error {
